@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>سایت‌های شگفت انگیز</h1>
+<ul>
+{% for site in sites %}
+    <li>
+        <a href="{% url 'site_detail' site.id %}">
+            <img src="{{ site.image.url }}" alt="{{ site.title }}">
+        </a>
+        <h2>{{ site.title }}</h2>
+        <p>{{ site.description }}</p>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}

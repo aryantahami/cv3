@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+    <h1>سایت‌های شگفت انگیز</h1>
+
+
+
+    <h2>Our Gallery</h2>
+    <p>Credit goes to <a href="http://www.pirolab.it" target="_blank"> Diego Valobra</a> for piroxbox. Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Donec tempus rutrum tellus at varius. Ut sit amet arcu elit, in posuere
+        arcu. Phasellus in sapien vel felis imperdiet ullamcorper.</p>
+
+    <div class="cleaner h40"></div>
+
+    <div id="gallery">
+
+        {% for site in sites %}
+            <div class="gallery_box">
+                <a href="{% url 'site_detail' site.id %}">
+                    <img src="{{ site.image.url }}" alt="{{ site.title }}"></a>
+                    <div class="right">
+                        <h5>{{ site.title }}</h5>
+                        {{ site.description }}
+                        <a href="#" class="more float_r">Visit site</a>
+                    </div>
+                    <div class="cleaner"></div>
+            </div>
+
+        {% endfor %}
+
+    </div> <!-- end of gallery -->
+{% endblock %}
