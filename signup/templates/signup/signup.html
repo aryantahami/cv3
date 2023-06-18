@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+            {% block head %}
+<link rel="stylesheet" href="{% static 'signup.css' %}">
+            {% endblock head %}
+
+{% block content %}
+  <h2>فرم ثبت نام</h2>
+<form class="signup-form">
+  <h2>ثبت نام</h2>
+    <label>
+        <input type="text" placeholder="نام">
+    </label>
+    <label>
+        <input type="email" placeholder="ایمیل">
+    </label>
+    <label>
+        <input type="password" placeholder="رمز عبور">
+    </label>
+    <button type="submit">ثبت نام</button>
+</form>
+{% endblock %}
+
+
