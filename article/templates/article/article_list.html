@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- article_list.html -->
+{% for article in articles %}
+    <div class="article">
+        <a href="{% url 'article_detail' article.id %}">
+            <img src="{{ article.image.url }}" alt="{{ article.title }}">
+            <h2>{{ article.title }}</h2>
+        </a>
+    </div>
+     {% empty %}
+    <p>There are no articles to display.</p>
+{% endfor %}
+{% endblock %}

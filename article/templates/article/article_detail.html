@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- article_detail.html -->
+<div class="article">
+    <img src="{{ article.image.url }}" alt="{{ article.title }}">
+    <h2>{{ article.title }}</h2>
+    <p>{{ article.description }}</p>
+    {% if article.youtube_link %}
+        <a href="{{ article.youtube_link }}">Watch on YouTube</a>
+    {% endif %}
+    {% if article.linkedin_link %}
+        <a href="{{ article.linkedin_link }}">View on LinkedIn</a>
+    {% endif %}
+    {% if article.github_link %}
+        <a href="{{ article.github_link }}">View on GitHub</a>
+    {% endif %}
+</div>
+{% endblock %}

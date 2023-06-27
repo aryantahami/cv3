@@ -22,49 +22,57 @@
         </div>
     </div>
 
-    <div class="post_box">
-        		<a href="#"><img src="{% static "images/templatemo_image_01.jpg" %}" alt="Image 1" /></a>
-          <div class="post_box_right">
-                    <a href="#">Illustrations</a>, <a href="#">Graphics</a>
-					<h2>Wed Design Tips</h2>
-					<div class="post_meta"><strong>Date:</strong> May 28, 2048 | <strong>Author:</strong> Thomas | <a href="blog_post.html">128 comments</a></div>
-                    <p><a href="#">Blue Marble</a> is free css template for your personal or commercial websites. Credits go to <a rel="nofollow" href="http://www.photovaco.com">PhotoVaco</a> for photos, <a rel="nofollow" href="http://www.brusheezy.com/textures/2433-Dying-Ice">Dying Ice</a> for Texture, <a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249">jwloh</a> for Aquaticus social icons and <a rel="nofollow" href="http://nivo.dev7studios.com">dev7studios</a> for Nivo Slider.</p>
+{#    <div class="post_box">#}
+{#        		<a href="#"><img src="{% static "images/templatemo_image_01.jpg" %}" alt="Image 1" /></a>#}
+{#          <div class="post_box_right">#}
+{#                    <a href="#">Illustrations</a>, <a href="#">Graphics</a>#}
+{#					<h2>Wed Design Tips</h2>#}
+{#					<div class="post_meta"><strong>Date:</strong> May 28, 2048 | <strong>Author:</strong> Thomas | <a href="blog_post.html">128 comments</a></div>#}
+{#                    <p><a href="#">Blue Marble</a> is free css template for your personal or commercial websites. Credits go to <a rel="nofollow" href="http://www.photovaco.com">PhotoVaco</a> for photos, <a rel="nofollow" href="http://www.brusheezy.com/textures/2433-Dying-Ice">Dying Ice</a> for Texture, <a href="http://jwloh.deviantart.com/art/Aquaticus-Social-91014249">jwloh</a> for Aquaticus social icons and <a rel="nofollow" href="http://nivo.dev7studios.com">dev7studios</a> for Nivo Slider.</p>#}
+{#            <div class="cleaner"></div>#}
+{#              <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>#}
+{#          </div>#}
+{#        <div class="cleaner"></div>#}
+{#    </div>#}
+{##}
+{#    <div class="post_box">#}
+{#        <a href="#"><img src="{% static "images/templatemo_image_02.jpg" %}" alt="Image 2"/></a>#}
+{#        <div class="post_box_right">#}
+{#            <a href="#">CSS Templates</a>, <a href="#">Web Design</a>#}
+{#            <h2>Web Development Tips</h2>#}
+{#            <div class="post_meta"><strong>Date:</strong> May 24, 2048 | <strong>Author:</strong> Vinla | <a#}
+{#                    href="blog_post.html">512 comments</a></div>#}
+{#            <p> Cras porta porta turpis, sed ornare quam adipiscing non. Mauris sit amet ipsum enim. Mauris et elit#}
+{#                eget risus congue malesuada aliquet eget augue. Credits go to <a rel="nofollow"#}
+{#                                                                                 href="http://www.brusheezy.com/brushes/1639-Urban">Rawox</a>#}
+{#                for Photoshop Brushes and <a rel="nofollow"#}
+{#                                             href="http://www.gcmingati.net/wordpress/wp-content/lab/jquery/svwt/">slideViewerPro</a>#}
+{#                for image slider. </p>#}
+{#            <div class="cleaner"></div>#}
+{#            <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>#}
+{#        </div>#}
+{#        <div class="cleaner"></div>#}
+{#    </div>#}
+
+    {% for article in articles %}
+        <div class="post_box post_box_last">
+            <a href="{% url 'article_detail' article.id %}">
+                <img src="{{ article.image.url }}" alt="{{ article.title }}"></a>
+            <div class="post_box_right">
+                <a href="#">Marketing</a>, <a href="#">Advertising</a>
+                <h2>{{ article.title }}</h2>
+                <p>{{ article.description|linebreaks|truncatechars_html:120 }}</p>
+                <div class="post_meta"><strong>Date:</strong> May 20, 2048 | <strong>Author:</strong> Juvinho | <a
+                        href="blog_post.html">256 comments</a></div>
+                <p></p>
+                <div class="cleaner"></div>
+                <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>
+            </div>
             <div class="cleaner"></div>
-                    <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>
-    			</div>
-                <div class="cleaner"></div>
-            </div>
+        </div>
+    {% endfor %}
 
-            <div class="post_box">
-				<a href="#"><img src="{% static "images/templatemo_image_02.jpg" %}" alt="Image 2" /></a>
-          <div class="post_box_right">
-                    <a href="#">CSS Templates</a>, <a href="#">Web Design</a>
-					<h2>Web Development Tips</h2>
-					<div class="post_meta"><strong>Date:</strong> May 24, 2048 | <strong>Author:</strong> Vinla | <a href="blog_post.html">512 comments</a></div>
-                    <p> Cras porta porta turpis, sed ornare quam adipiscing non. Mauris sit amet ipsum enim. Mauris et elit eget risus congue malesuada aliquet eget augue. Credits go to <a rel="nofollow" href="http://www.brusheezy.com/brushes/1639-Urban">Rawox</a> for Photoshop Brushes and <a rel="nofollow" href="http://www.gcmingati.net/wordpress/wp-content/lab/jquery/svwt/">slideViewerPro</a> for image slider.  </p>
-                    <div class="cleaner"></div>
-                    <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>
-				</div>
-                <div class="cleaner"></div>
-            </div>
-
-    <div class="post_box post_box_last">
-				<a href="#"><img src="{% static "images/templatemo_image_03.jpg" %}" alt="Image 3" /></a>
-          <div class="post_box_right">
-                	<a href="#">Marketing</a>, <a href="#">Advertising</a>
-              <h2>Affiliate Programs</h2>
-              <div class="post_meta"><strong>Date:</strong> May 20, 2048 | <strong>Author:</strong> Juvinho | <a
-                      href="blog_post.html">256 comments</a></div>
-              <p>All templates are absolutely free to download, modify and apply for your websites without any
-                  restriction. All of them are W3C standard compliant XHTML/CSS layouts. Enjoy! Lorem ipsum dolor sit
-                  amet, consectetur adipiscing elit. </p>
-              <div class="cleaner"></div>
-              <a href="{% url 'blog_post' %}" class="more float_r">Read more</a>
-          </div>
-        <div class="cleaner"></div>
-    </div>
-
-
+    <a href="{% url 'article_list' %}">بیشتر</a>
 
 
 

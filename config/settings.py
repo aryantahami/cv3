@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'pages',
     'aisite',
     'signup',
+    'article',
 ]
 
 MIDDLEWARE = [
