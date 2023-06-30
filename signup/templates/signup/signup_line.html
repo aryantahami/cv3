@@ -1,0 +1,13 @@
+
+{% load static %}
+<div class="sidebar-item">
+  <h3>ثبت نام کنید </h3>
+  <form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">ثبت نام</button>
+  </form>
+</div>
+
+
+{#در این کد، فرم ثبت نام به همراه یک دکمه "ثبت نام" در لاین راست نمایش داده شده است. همچنین، با استفاده از تابع {% load static %}، از فایل‌های استاتیک مانند فایل CSS و JavaScript نیز می‌توانید استفاده کنید.#}

@@ -62,8 +62,8 @@
                 <a href="#">Marketing</a>, <a href="#">Advertising</a>
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.description|linebreaks|truncatechars_html:120 }}</p>
-                <div class="post_meta"><strong>Date:</strong> May 20, 2048 | <strong>Author:</strong> Juvinho | <a
-                        href="blog_post.html">256 comments</a></div>
+                <div class="post_meta"><strong>Date:</strong> {{ article.created_at }} <strong></strong><a
+                        href="blog_post.html"></a></div>
                 <p></p>
                 <div class="cleaner"></div>
                 <a href="{% url 'article_detail' article.id %}" class="more float_r">Read more</a>
