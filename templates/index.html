@@ -10,15 +10,15 @@
     <div id="homepage_slider">
         <div id="slider">
             <a href="#"><img src="{% static "images/slideshow/01.jpg" %}" alt="Image 1"
-                             title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/></a>
+                             title=" ربات های هوشمند"/></a>
             <a href="#"><img src="{% static "images/slideshow/02.jpg" %}" alt="Image 2"
-                             title="Nullam ante leo, consectetur eget adipiscing et."/></a>
+                             title="روشهای جدید کسب درآمد "/></a>
             <a href="#"><img src="{% static "images/slideshow/03.jpg" %}" alt="Image 3"
-                             title="Suspendisse sit amet enim elit. Curabitur tempor consequat."/></a>
+                             title="امنیت در دنیای جدید "/></a>
             <a href="#"><img src="{% static "images/slideshow/04.jpg" %}" alt="Image 4"
-                             title="Nulla faucibus luctus quam eget placerat. "/></a>
+                             title="استفاده از هوش مصنوعی در جهت سلامت بیشتر  "/></a>
             <a href="#"><img src="{% static "images/slideshow/05.jpg" %}" alt="Image 5"
-                             title="Phasellus aliquet viverra posuere. "/></a>
+                             title="آیا میتوان با هوش مصنوعی به جاودانگی رسید ؟ "/></a>
         </div>
     </div>
 
@@ -59,20 +59,20 @@
             <a href="{% url 'article_detail' article.id %}">
                 <img src="{{ article.image.url }}" alt="{{ article.title }}"></a>
             <div class="post_box_right">
-                <a href="#">Marketing</a>, <a href="#">Advertising</a>
+                <a href="#"></a> <a href="#"></a>
                 <h2>{{ article.title }}</h2>
                 <p>{{ article.description|linebreaks|truncatechars_html:120 }}</p>
+                <a href="{% url 'article_detail' article.id %}" class="more float_r">بیشتر بدانید</a>
                 <div class="post_meta"><strong>Date:</strong> {{ article.created_at }} <strong></strong><a
                         href="blog_post.html"></a></div>
                 <p></p>
                 <div class="cleaner"></div>
-                <a href="{% url 'article_detail' article.id %}" class="more float_r">Read more</a>
             </div>
             <div class="cleaner"></div>
         </div>
     {% endfor %}
 
-    <a href="{% url 'article_list' %}">بیشتر</a>
+    <a href="{% url 'article_list' %}">آیا میخواهید مقالات بیشتری مطالعه کنید ؟</a>
 
 
 

@@ -47,10 +47,11 @@ h6 { font-size: 14px; margin: 0 0 5px; padding: 0; }
 
 a.more { 
 	display: block; 
-	width: 128px; 
+	width: 128px;
+	font-size: 16px;
 	height: 20px; 
 	padding: 22px 0 0; 
-	color: #94c2f3; 
+	color: #fff;
 	font-weight: bold; 
 	text-align: center; 
 	background: url(images/templatemo_more.png) no-repeat bottom center  

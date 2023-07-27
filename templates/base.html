@@ -64,12 +64,12 @@
             <a href="#"><span></span></a>
         </div> <!-- end of site_title -->
 
-        <div id="social_box">
-            <a href="#"><img src="{% static "images/digg.png" %}" alt="digg"/></a>
-            <a href="#"><img src="{% static "images/facebook.png" %}" alt="facebook"/></a>
-            <a href="#"><img src="{% static "images/twitter.png" %}" alt="twitter"/></a>
-            <a href="#"><img src="{% static "images/feed.png" %}" alt="feed"/></a>
-        </div>
+{#        <div id="social_box">#}
+{#            <a href="#"><img src="{% static "images/digg.png" %}" alt="digg"/></a>#}
+{#            <a href="#"><img src="{% static "images/facebook.png" %}" alt="facebook"/></a>#}
+{#            <a href="#"><img src="{% static "images/twitter.png" %}" alt="twitter"/></a>#}
+{#            <a href="#"><img src="{% static "images/feed.png" %}" alt="feed"/></a>#}
+{#        </div>#}
 
         <div id="templatemo_menu">
             <ul>
@@ -157,15 +157,15 @@
             <ul class="tmo_list">
                 <li><a href="#">منتظر پیشنهادات ارزشمند شما هستم</a></li>
                 <li><a href="#"></a></li>
-                <li><a href="#">Phasellus aliquet viverra posuere</a></li>
-                <li><a href="#">Sed vel tellus a turpis mollis auctor</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
             </ul>
         </div>
 
         <div class="footer_col_w300 last">
             <h4>درباره ما</h4>
             <p>سلام، من آرین تهامی هستم. به عنوان یک علاقه‌مند به تکنولوژی‌های جدید، به برنامه‌نویسی روی آورده‌ام و با زبان‌های برنامه‌نویسی پایتون، اچ‌تی‌ام‌ال و سی‌اس‌اس آشنایی دارم. در حال حاضر در شهر مشهد ایران زندگی می‌کنم و فعالیت‌هایم را در گیت‌هاب و لینکداین انجام می‌دهم. علاقه‌مندی‌هایم در دنیای</p>
-            <p>Copyright © 2048 <a href="#">Your Company Name</a> <br/></p>
+            <a href="{% url 'about' %}">بیشتر</a>
         </div>
 
         <div class="cleaner"></div>
